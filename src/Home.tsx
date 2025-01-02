@@ -464,6 +464,43 @@ const Home = (props: HomeProps) => {
       }, 20000);
     })();
   }, [refreshCandyMachineState]);
+<Paper
+  style={{
+    backgroundColor: "#1A202C",
+    padding: "20px",
+    textAlign: "center",
+    marginBottom: "20px",
+  }}
+>
+  <Typography variant="h4" style={{ color: "white", fontWeight: "bold" }}>
+    Welcome to Pudgy Gummy NFT Mint!
+  </Typography>
+  <Typography variant="body1" style={{ color: "lightgray" }}>
+    Mint your exclusive NFTs and join the Pudgy Gummy family.
+  </Typography>
+</Paper>
+<Grid container spacing={2} style={{ padding: "20px" }}>
+  {[...Array(10)].map((_, index) => (
+    <Grid item xs={12} sm={6} md={4} key={index}>
+      <Paper
+        style={{
+          padding: "10px",
+          textAlign: "center",
+          backgroundColor: "#151A1F",
+        }}
+      >
+        <img
+          src={`https://placehold.co/300x300?text=NFT+${index + 1}`}
+          alt={`NFT ${index + 1}`}
+          style={{ width: "100%", borderRadius: "10px" }}
+        />
+        <Typography variant="h6" style={{ color: "white", marginTop: "10px" }}>
+          NFT #{index + 1}
+        </Typography>
+      </Paper>
+    </Grid>
+  ))}
+</Grid>
 
   return (
     <Container style={{ marginTop: 100 }}>
