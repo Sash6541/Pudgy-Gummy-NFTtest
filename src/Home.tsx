@@ -496,10 +496,11 @@ const Home = (props: HomeProps) => {
               }}
             >
               <img
-                src={`https://placehold.co/300x300?text=NFT+${index + 1}`}
-                alt={`NFT ${index + 1}`}
-                style={{ width: "100%", borderRadius: "10px" }}
-              />
+  src={`https://green-worrying-amphibian-665.mypinata.cloud/ipfs/bafybeiggptuh57tm2x23wi34dxri37oxdjeryp74r6shwc5kcp4qghndci/${index}.jpg`}
+  alt={`NFT ${index + 1}`}
+  style={{ width: "100%", borderRadius: "10px" }}
+/>
+
               <Typography
                 variant="h6"
                 style={{ color: "white", marginTop: "10px" }}
