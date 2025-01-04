@@ -477,40 +477,38 @@ const Home = (props: HomeProps) => {
         }}
       >
         <Typography variant="h4" style={{ color: "white", fontWeight: "bold" }}>
-          Welcome to Pudgy Gummy NFT Mint!
+          Welcome to Pudgy Faces NFT Mint!
         </Typography>
         <Typography variant="body1" style={{ color: "lightgray" }}>
           Mint your exclusive NFTs and join the Pudgy Gummy family.
         </Typography>
       </Paper>
-
-      {/* Add the NFT grid below the banner */}
-      <Grid container spacing={2} style={{ padding: "20px" }}>
-        {[...Array(10)].map((_, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <Paper
-              style={{
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "#151A1F",
-              }}
-            >
-              <img
-  src={`https://green-worrying-amphibian-665.mypinata.cloud/ipfs/bafybeiggptuh57tm2x23wi34dxri37oxdjeryp74r6shwc5kcp4qghndci/${index}.jpg`}
-  alt={`NFT ${index + 1}`}
-  style={{ width: "100%", borderRadius: "10px" }}
-/>
-
-              <Typography
-                variant="h6"
-                style={{ color: "white", marginTop: "10px" }}
-              >
-                NFT #{index + 1}
-              </Typography>
-            </Paper>
-          </Grid>
-        ))}
-      </Grid>
+const imageLinks = [
+  "https://green-worrying-amphibian-665.mypinata.cloud/ipfs/QmQWp5Z1f3xiAh7yPdXBszqqzn46GfLpxLxit6GkD93jz9/0.jpg",
+  "https://green-worrying-amphibian-665.mypinata.cloud/ipfs/QmWKjKPUuEwv8BB8xiCEpqLzyxexV4nu8APqPefU2sF6r3/1.jpg",
+  "https://green-worrying-amphibian-665.mypinata.cloud/ipfs/QmSgwh5jb6nqBGewFUYT29XU9m8YWUbK5sj2sQVYy6MQtV/2.jpg",
+  "https://green-worrying-amphibian-665.mypinata.cloud/ipfs/QmTuRyViqL4sE4GnGTmR56h6PJuHr9nPVhifBtmVUbujDW/3.jpg",
+  "https://green-worrying-amphibian-665.mypinata.cloud/ipfs/QmVcpPtKhNeTUYQLtAEfXsG84w81MHdrSW1pn691dMXScv/4.jpg",
+  "https://green-worrying-amphibian-665.mypinata.cloud/ipfs/QmVZ3LQPYk4AZrvEDMJzPSFNsZh5Apy4ENeo5s9WuZvc2e/5.jpg",
+  "https://green-worrying-amphibian-665.mypinata.cloud/ipfs/QmXapcZqx5edss7yHQKTuJySnNN6ocDg63bQQzYqWVgb3d/6.jpg",
+  "https://green-worrying-amphibian-665.mypinata.cloud/ipfs/QmYUFo88DpaFEKBYt4WXkC92awUC9xr3zjW1oKRK1onNai/7.jpg",
+  "https://green-worrying-amphibian-665.mypinata.cloud/ipfs/QmdvkDMyApirZ3fUcAKm314ZD6m9VRx9j4ckz5QHDWDvrN/8.jpg",
+  "https://green-worrying-amphibian-665.mypinata.cloud/ipfs/QmYJcaEbYLPxhzFRanB7sEAAr4Ckv6xvDfrHFbxejdT2H1/9.jpg",
+];
+return (
+  <div className="grid-container" style={{ padding: "20px" }}>
+    {imageLinks.map((link, index) => (
+      <div key={index} className="grid-item" style={{ padding: "10px", textAlign: "center", backgroundColor: "#151A1F" }}>
+        <img
+          src={link}
+          alt={`NFT ${index + 1}`}
+          style={{ width: "100%", borderRadius: "10px" }}
+        />
+        <p style={{ color: "white", marginTop: "10px" }}>NFT #{index + 1}</p>
+      </div>
+    ))}
+  </div>
+);
       <Container maxWidth="xs" style={{ position: "relative" }}>
         <Paper
           style={{
